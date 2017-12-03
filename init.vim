@@ -25,8 +25,9 @@ syntax on
 set encoding=utf-8
 " show incomplete comands
 set showcmd
-
-
+"backup stuff
+set backup
+set backupdir=~/.vim/tmp//
 
 " === DEFAULTS ===
 " I don't know if I should delete these
