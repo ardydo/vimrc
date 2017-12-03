@@ -1,5 +1,5 @@
 " === BASICS ===
-" not compatible 
+" not compatible
 set nocp
 " visible line numbers
 set number
@@ -27,13 +27,6 @@ set encoding=utf-8
 set showcmd
 
 
-" === THEME ===
-" color scheme
-colorscheme molokai
-" bg affinity
-set bg=dark
-" 256 colors
-t_Co=256
 
 " === DEFAULTS ===
 " I don't know if I should delete these
@@ -110,4 +103,13 @@ nnoremap <F3> :ToggleWorkspace<CR>
 " clear worskpace
 nnoremap <s-F3> : CloseHiddenBuffers<CR>
 " undotree
-nnoremap <F4> :UndotreeToggle<cr>
+nnoremap <F4> :UndotreeToggle<cr
+
+" === THEME ===
+" bg affinity
+set bg=dark
+" color scheme
+colorscheme molokai
+" 256 colors
+set t_Co=256
+
