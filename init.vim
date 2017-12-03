@@ -1,107 +1,48 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-
-" Plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'quabug/vim-gdscript'
-Plugin 'tomasr/molokai'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'thaerkh/vim-workspace'
-Plugin 'mbbill/undotree'
-Plugin 'luochen1990/rainbow'
-Plugin 'mhinz/vim-startify'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
-" minhas variávies de alguma coisa. num sei
-set mouse=a   		" alguma config do mouse. eu sei lá
-set ai 			" identação
-" set spell spelllang=pt_br
-let g:airline_theme = 'molokai'
+" === BASICS ===
+" not compatible 
+set nocp
+" visible line numbers
 set number
-set bg =dark		" cores para fundo escuro
-colorscheme molokai
-" encoding pro coiso de icones
-set encoding=utf8
-set t_Co=256
+"" ruler
+set ru
+" more undo history
+set history=25
+" identation stuff
+set autoindent smartindent cindent
+" search stuff
+set hlsearch incsearch ignorecase smartcase
+" visual wrap
 set wrap
+" turning physical wrap off
+set textwidth=0 wrapmargin=0
+" good linebreak
 set linebreak
-set nolist
-set wrapmargin=0
-set formatoptions-=t
-set formatoptions+=1
+" mouse on
+set mouse=a
+" syntax highlighting
+syntax on
+" proper encoding
+set encoding=utf-8
+" show incomplete comands
+set showcmd
 
-" ==== config de plugins ====
-" bookmarks do startify
-let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim' } ]
-" fonte com icones
-set guifont=Fantasque\ Sans\ Mono\ 12
-" config pra airline + icones
-let g:airline_powerline_fonts = 1
-" ==== keys ===
-" botão pra salvar
-" map <C-w> :w<CR>
-" startify
-nnoremap <F2> :Startify<CR>
-" workspace stuff
-nnoremap <F3> :ToggleWorkspace<CR>
-" clear worskpace
-nnoremap <s-F3> : CloseHiddenBuffers<CR>
-" undotree
-nnoremap <F5> :UndotreeToggle<cr>
-" persistent undo file
-if has("persistent_undo")
-    set undodir=~/.undodir/
-    set undofile
-endif
-" rainbow
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
-" An example for a vimrc file.
-set backup             " keep a backup file (restore to previous version)
-set undofile           " keep an undo file (undo changes after closing)
-set ruler              " show the cursor position all the time
-set showcmd            " display incomplete commands
+" === THEME ===
+" color scheme
+colorscheme molokai
+" bg affinity
+set bg=dark
+" 256 colors
+t_Co=256
 
+" === DEFAULTS ===
+" I don't know if I should delete these
 " Don't use Ex mode, use Q for formatting
 noremap Q gq
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
-
-" Switch syntax highlighting on
-syntax on
-
-" Also switch on highlighting the last used search pattern.
-set hlsearch
 
 " I like highlighting strings inside C comments.
 let c_comment_strings=1
@@ -112,22 +53,6 @@ let c_comment_strings=1
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
 
-" Put these in an autocmd group, so that we can delete them easily.
-augroup vimrcEx
-  autocmd!
-
-  " For all text files set 'textwidth' to 78 characters.
-  " autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  autocmd BufReadPost *
-    \ if line("'\"") >= 1 && line("'\"") <= line("$") |
-    \   execute "normal! g`\"" |
-    \ endif
-
-augroup END
-
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -135,3 +60,54 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis
                  \ | wincmd p | diffthis
 endif
+
+filetype off                  " required
+
+" vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+	" actual plugins
+	Plugin 'ryanoasis/vim-devicons'
+	Plugin 'vim-airline/vim-airline'
+	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'quabug/vim-gdscript'
+	Plugin 'tomasr/molokai'
+	Plugin 'godlygeek/tabular'
+	Plugin 'plasticboy/vim-markdown'
+	Plugin 'mbbill/undotree'
+	Plugin 'luochen1990/rainbow'
+	Plugin 'mhinz/vim-startify'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" === PLUGINS ===
+" ==== STARTIFY ====
+" bookmarks do startify
+let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim' } ]
+" fonte com icones
+set guifont=Fantasque\ Sans\ Mono\ 12
+" ==== AIRLINE ====
+" config pra airline + icones
+let g:airline_powerline_fonts = 1
+" airline theme
+let g:airline_theme = 'molokai'
+" persistent undo file
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
+
+" ==== RAINBOW ====
+let g:rainbow_active = 1
+
+" === CUSTOM KEYS ===
+" startify
+nnoremap <F2> :Startify<CR>
+" workspace stuff
+nnoremap <F3> :ToggleWorkspace<CR>
+" clear worskpace
+nnoremap <s-F3> : CloseHiddenBuffers<CR>
+" undotree
+nnoremap <F4> :UndotreeToggle<cr>
