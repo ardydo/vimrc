@@ -101,6 +101,8 @@ let g:rainbow_active = 1
 nnoremap <F2> :Startify<CR>
 " undotree
 nnoremap <F3> :UndotreeToggle<cr>
+" : remapping
+nnoremap ; :
 
 " === THEME ===
 " bg affinity
