@@ -99,12 +99,8 @@ let g:rainbow_active = 1
 " === CUSTOM KEYS ===
 " startify
 nnoremap <F2> :Startify<CR>
-" workspace stuff
-nnoremap <F3> :ToggleWorkspace<CR>
-" clear worskpace
-nnoremap <s-F3> : CloseHiddenBuffers<CR>
 " undotree
-nnoremap <F4> :UndotreeToggle<cr>
+nnoremap <F3> :UndotreeToggle<cr>
 
 " === THEME ===
 " bg affinity
