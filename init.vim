@@ -104,7 +104,7 @@ nnoremap <F3> :ToggleWorkspace<CR>
 " clear worskpace
 nnoremap <s-F3> : CloseHiddenBuffers<CR>
 " undotree
-nnoremap <F4> :UndotreeToggle<cr
+nnoremap <F4> :UndotreeToggle<cr>
 
 " === THEME ===
 " bg affinity
