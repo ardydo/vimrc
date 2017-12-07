@@ -80,6 +80,17 @@ filetype plugin indent on    " required
 " ==== STARTIFY ====
 " bookmarks do startify
 let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim' } ]
+" home list order
+let g:startify_list_order = [
+\ ['Sessões'],
+\ 'sessions',
+\ ['Favoritos'],
+\ 'bookmarks',
+\ ['Recentes'],
+\ 'files',
+\ ['Diretório'],
+\ 'dir',
+\ ]
 " fonte com icones
 set guifont=Fantasque\ Sans\ Mono\ 12
 " ==== AIRLINE ====
