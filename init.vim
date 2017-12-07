@@ -93,6 +93,8 @@ let g:startify_list_order = [
 \ ]
 " fonte com icones
 set guifont=Fantasque\ Sans\ Mono\ 12
+" sorting
+let g:startify_sessions_sort = 0
 " ==== AIRLINE ====
 " config pra airline + icones
 let g:airline_powerline_fonts = 1
