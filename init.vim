@@ -95,6 +95,7 @@ let g:startify_list_order = [
 set guifont=Fantasque\ Sans\ Mono\ 12
 " sorting
 let g:startify_sessions_sort = 0
+
 " ==== AIRLINE ====
 " config pra airline + icones
 let g:airline_powerline_fonts = 1
@@ -112,7 +113,6 @@ let g:rainbow_active = 1
 " === CUSTOM KEYS ===
 " : remapping
 nnoremap ; :
-
 " startify
 nnoremap <F2> :Startify<CR>
 " undotree
