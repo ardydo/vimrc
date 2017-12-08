@@ -28,6 +28,11 @@ set showcmd
 "backup stuff
 set backup
 set backupdir=~/.vim/tmp//
+" tabstop stuff
+set tabstop=4
+set softtabstop=2
+set shiftwidth=4
+
 
 " === DEFAULTS ===
 " I don't know if I should delete these
