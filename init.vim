@@ -25,7 +25,7 @@ syntax on
 set encoding=utf-8
 " show incomplete comands
 set showcmd
-"backup stuff
+" backup stuff
 set backup
 set backupdir=~/.vim/tmp//
 " tabstop stuff
