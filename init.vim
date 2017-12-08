@@ -67,7 +67,6 @@ call vundle#begin()
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'quabug/vim-gdscript'
 	Plugin 'tomasr/molokai'
-	Plugin 'godlygeek/tabular'
 	Plugin 'plasticboy/vim-markdown'
 	Plugin 'mbbill/undotree'
 	Plugin 'luochen1990/rainbow'
@@ -94,7 +93,9 @@ let g:startify_list_order = [
 " fonte com icones
 set guifont=Fantasque\ Sans\ Mono\ 12
 " sorting
-let g:startify_sessions_sort = 0
+let g:startify_session_sort = 1
+" header
+let g:startify_custom_header = ['']
 
 " ==== AIRLINE ====
 " config pra airline + icones
