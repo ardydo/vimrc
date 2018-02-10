@@ -67,7 +67,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	" actual plugins
-	Plugin 'ryanoasis/vim-devicons'
 	Plugin 'vim-airline/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'quabug/vim-gdscript'
@@ -76,6 +75,7 @@ call vundle#begin()
 	Plugin 'mbbill/undotree'
 	Plugin 'luochen1990/rainbow'
 	Plugin 'mhinz/vim-startify'
+	Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -96,7 +96,7 @@ let g:startify_list_order = [
 \ 'dir',
 \ ]
 " fonte com icones
-set guifont=Fantasque\ Sans\ Mono\ 12
+set guifont=FantasqueSansMono\ Nerd\ Font\ Regular:h12
 " sorting
 let g:startify_session_sort = 1
 " header
