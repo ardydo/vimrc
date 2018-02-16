@@ -125,6 +125,9 @@ nnoremap ; :
 nnoremap <F2> :Startify<CR>
 " undotree
 nnoremap <F3> :UndotreeToggle<cr>
+" blankspace toggle
+nnoremap <F4> :AirlineToggleWhitespace<cr>
+
 
 " === THEME ===
 " bg affinity
