@@ -86,14 +86,14 @@ filetype plugin indent on    " required
 let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim' } ]
 " home list order
 let g:startify_list_order = [
+\ ['Diretório'],
+\ 'dir',
 \ ['Sessões'],
 \ 'sessions',
 \ ['Favoritos'],
 \ 'bookmarks',
 \ ['Recentes'],
 \ 'files',
-\ ['Diretório'],
-\ 'dir',
 \ ]
 " fonte com icones
 set guifont=FantasqueSansMono\ Nerd\ Font\ Regular:h12
