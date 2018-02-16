@@ -101,6 +101,8 @@ set guifont=FantasqueSansMono\ Nerd\ Font\ Regular:h12
 let g:startify_session_sort = 1
 " header
 let g:startify_custom_header = ['']
+" sessio auto saving
+let g:startify_session_persistence = 1
 
 " ==== AIRLINE ====
 " config pra airline + icones
