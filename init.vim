@@ -76,6 +76,7 @@ call vundle#begin()
 	Plugin 'luochen1990/rainbow'
 	Plugin 'mhinz/vim-startify'
 	Plugin 'ryanoasis/vim-devicons'
+	Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -126,8 +127,9 @@ nnoremap <F2> :Startify<CR>
 " undotree
 nnoremap <F3> :UndotreeToggle<cr>
 " blankspace toggle
-nnoremap <F4> :AirlineToggleWhitespace<cr>
-
+nnoremap <F5> :AirlineToggleWhitespace<cr>
+" nerdtree
+nnoremap <F4> :NERDTreeToggle <cr>
 
 " === THEME ===
 " bg affinity
