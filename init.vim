@@ -32,6 +32,11 @@ set backupdir=~/.vim/tmp//
 set tabstop=4
 set softtabstop=2
 set shiftwidth=4
+"spliting stuff
+set eadirection=ver
+set sb
+set spr
+
 
 
 " === DEFAULTS ===
