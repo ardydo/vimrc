@@ -102,7 +102,7 @@ let g:startify_list_order = [
 \ 'files',
 \ ]
 " fonte com icones
-set guifont=FantasqueSansMono\ Nerd\ Font\ Regular:h12
+set guifont=FantasqueSansMono\ Nerd\ Font\ Mono:h12
 " sorting
 let g:startify_session_sort = 1
 " header
