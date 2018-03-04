@@ -82,6 +82,7 @@ call vundle#begin()
 	Plugin 'mhinz/vim-startify'
 	Plugin 'ryanoasis/vim-devicons'
 	Plugin 'scrooloose/nerdtree'
+	Plugin 'ledger/vim-ledger'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -124,6 +125,17 @@ endif
 
 " ==== RAINBOW ====
 let g:rainbow_active = 1
+
+" ==== LEDGER ====
+
+au FileType ledger noremap { ?^\d<CR>
+au FileType ledger noremap } /^\d<CR>
+
+au FileType ledger inoremap <silent> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
+au FileType ledger vnoremap <silent> <Tab> :LedgerAlign<CR>
+let g:ledger_align_at = 40
+let g:ledger_winpos = 'l'
+let g:ledger_qf_vertical = 1
 
 " === CUSTOM KEYS ===
 " : remapping
