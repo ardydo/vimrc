@@ -112,7 +112,8 @@ let g:startify_session_persistence = 1
 
 " ==== AIRLINE ====
 " config pra airline + icones
-let g:airline_powerline_fonts = 1
+let g:airline_symbols_ascii = 1
+let g:airline_powerline_fonts = 0
 " airline theme
 let g:airline_theme = 'molokai'
 " persistent undo file
