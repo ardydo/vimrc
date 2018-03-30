@@ -148,6 +148,9 @@ nnoremap <F3> :UndotreeToggle<cr>
 nnoremap <F5> :AirlineToggleWhitespace<cr>
 " nerdtree
 nnoremap <F4> :NERDTreeToggle <cr>
+" fichamento stuff
+nnoremap <C-c> i“<ESC>"+p<bar>:%j<RETURN>A”<RETURN><ESC>gg"+dG
+
 
 " === THEME ===
 " bg affinity
